@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function f1(){
+            var result = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                if(typeof (arguments[i] == "number")){
+                    result += arguments[i];
+                }
+            }
+            return result;
+        }
+        alert(f1(1, 2, 3, 4, 5, 'a'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
