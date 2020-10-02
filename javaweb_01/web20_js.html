@@ -7,11 +7,14 @@
         window.onload = function (){
             var A = document.getElementById("a");
             A.innerHTML = "hello"
-            var k = document.getElementById("b");
+            var k = document.getElementById("bt");
             k.onclick = function () {
                 var B = document.getElementsByName("b")
                 for (var i = 0; i < B.length; i++) {
-                    B[i].checked = checked;
+                    if (B[i].checked)
+                        B[i].checked = false;
+                    else
+                        B[i].checked = true;
                 }
             }
         }
@@ -19,7 +22,7 @@
 </head>
 <body>
     <div id="a"></div>
-    <button id="b"></button>
+    <button id="bt">按钮</button>
         <input type="checkbox" name="b" value="java"/>java
         <input type="checkbox" name="b" value="c++"/>c++
         <input type="checkbox" name="b" value="python"/>python
