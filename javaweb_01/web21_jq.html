@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var b_a = document.getElementById("a");
+            b_a.onclick = function () {
+                alert("aaa")
+                alert((document.getElementById("username").value));
+                // var zzbds = "/^\w/{5, 12}$/"
+                var zzbds = new RegExp("^\w{2, 12}$");
+                var name = document.getElementById("username").value;
+                if (zzbds.test(name)) {
+                    $("#span1").innerHTML = "正确"
+                    document.getElementsByTagName("span")[0].innerHTML = "正确";
+                    alert("正确")
+                }else {
+                    $("#span1").innerHTML = "错误"
+                    document.getElementsByTagName("span")[0].innerHTML = "错误";
+                    alert("错误")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="username"/>
+    <button id="a" value="b_a1">验证</button>
+    <span id="span1"></span>
+</body>
+</html>
