@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jq/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 将<p>标签插入div里面
+            $("<p>你好</p>").appendTo("div");
+            // 将<p>标签插入div前面
+            $("<p id='aa'>你好啊</p>").prependTo("div");
+            //清空标签内的内容
+            $("#aa").empty();
+        });
+    </script>
+</head>
+<body>
+
+<div>div标签</div>
+
+</body>
+</html>
